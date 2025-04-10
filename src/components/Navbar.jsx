@@ -11,6 +11,12 @@ const Navbar = () => {
         <a href="#" className='group lg:text-lg md:text-base text-sm font-light text-yellow-500 lg:mr-12 mr-8 tracking-wide relative'>Inicio
             <span className='absolute -bottom-1 left-0 w-full h-[1px] bg-yellow-500 transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300'></span>
         </a>
+        <a href="#" className='group lg:text-lg md:text-base text-sm font-light text-white lg:mr-12 mr-8 tracking-wide relative'>Servicios
+            <span className='absolute -bottom-1 left-0 w-full h-[1px] bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300'></span>
+        </a>
+        <a href="#" className='group lg:text-lg md:text-base text-sm font-light text-white lg:mr-12 mr-8 tracking-wide relative'>Contacto
+            <span className='absolute -bottom-1 left-0 w-full h-[1px] bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300'></span>
+        </a>
       </div>
     </div>
   )
