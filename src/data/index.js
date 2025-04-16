@@ -15,7 +15,7 @@ export const socialIcons = [
   { icon: 'bx bxl-facebook-square' },
 ]
 
-export const aboutText = `Soy desarrollador web full stack, apasionado por construir soluciones útiles y eficientes desde la interfaz hasta el servidor. A lo largo de mi carrera he trabajado con frameworks frontend como Angular y React, creando interfaces modernas, dinámicas y pensadas para el usuario final.
+export const aboutText = `Francisco González, desarrollador web full stack, apasionado por construir soluciones útiles y eficientes desde la interfaz hasta el servidor. A lo largo de mi carrera he trabajado con frameworks frontend como Angular y React, creando interfaces modernas, dinámicas y pensadas para el usuario final.
 
 En el backend, domino Node.js y Java, con una mentalidad enfocada en arquitecturas limpias, escalabilidad y buenas prácticas. Desarrollo APIs RESTful, estructuro la lógica de negocio y diseño sistemas pensando tanto en el presente como en su evolución futura.
 
