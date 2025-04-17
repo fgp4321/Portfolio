@@ -36,7 +36,7 @@ const Hero = () => {
             ))}
           </span>
           <span className='xl:text-6xl md:text-4xl text-2xl tracking-wider xl:py-4 py-2 overflow-hidden'>
-            Soy {' '} <span className={`inline-block xl:w-[380px] md:w-[240px] w-[160px] lg:ml-6 ml-2 font-extrabold transform origin-left transition-transform duration-300 ease-out ${isRotating ? 'rotate-[100deg]' : 'rotate-0'}`}>{currentText}</span>{' '}Web Developer
+            Soy desarrollador{' '} <span className={`inline-block xl:w-[380px] md:w-[240px] w-[160px] lg:ml-6 ml-2 font-extrabold transform origin-left transition-transform duration-300 ease-out ${isRotating ? 'rotate-[100deg]' : 'rotate-0'}`}>{currentText}</span>
           </span>
         </h1>
         <button className='xl:w-[400px] md:w-[300px] w-[270px] bg-gray-200 md:py-1 py-0 md:px-4 px-2 xl:text-2xl md:text-xl text-base text-gray-900 tracking-widest rounded-r-4xl flex justify-between items-center md:mr-auto md:mx-0 mx-auto' onClick={() => setIsTextVisible(!isTextVisible)} onMouseEnter={() => setRoadImageOpacity(0.8)} onMouseLeave={() => setRoadImageOpacity(0.5)} >{isTextVisible ? 'Oculta mi historia' : 'Lee mi historia'} <i className={`bx ${isTextVisible ? 'bx-book-alt' : 'bx-book-open'}`}></i></button>
@@ -47,6 +47,7 @@ const Hero = () => {
         </div>
         <div className='lg:w-[600px] md:w-[500px] w-[350px] absolute left-1/2 -translate-x-1/2 -z-10'>
           <img src="images/road.png" alt="Road Image" className='w-full mx-auto transition-opacity duration-300' style={{opacity: roadImageOpacity}}/>
+          <span className='xl:text-xs md:text-[10px] text-[8px] font-bold tracking-wide text-yellow-500 absolute -top-5 xl:right-22 lg:right-26 md:right-16 right-10 rotate-[3.5deg] animate-bounce'>En busca de nuevos retos</span>
           <div className={`xl:h-[150px] h-[100px] px-3 xl:text-lg md:text-base text-xs font-light text-gray-200 text-justify tracking-wide overflow-y-auto transform origin-top custom-scrollbar ${isTextVisible ? 'scale-y-100' : 'scale-y-0'} transition-transform duration-300`}>
             <p className='xl:py-3 py-1 px-1 [&::first-letter]:text-[30px] [&::first-letter]:ml-5 [&::first-letter]:text-yellow-500'>{aboutText}</p>
           </div>
