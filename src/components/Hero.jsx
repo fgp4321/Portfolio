@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import { letters, professionTexts, aboutText } from '../data/index'
+import { letters, professionTexts, aboutText, socialIcons } from '../data/index'
 
 const Hero = () => {
   const [hoveredLetter, setHoveredLetter] = useState(null)
   const [currentText, setCurrentText] = useState(professionTexts[0])
   const [isRotating, setIsRotating] = useState(false)
   const [isTextVisible, setIsTextVisible] = useState(false)
+  const [roadImageOpacity, setRoadImageOpacity] = useState(0.5)
   let currentIndex = 0
 
   useEffect(() => {
@@ -38,9 +39,14 @@ const Hero = () => {
             Soy {' '} <span className={`inline-block xl:w-[380px] md:w-[240px] w-[160px] lg:ml-6 ml-2 font-extrabold transform origin-left transition-transform duration-300 ease-out ${isRotating ? 'rotate-[100deg]' : 'rotate-0'}`}>{currentText}</span>{' '}Web Developer
           </span>
         </h1>
-        <button className='xl:w-[400px] md:w-[300px] w-[270px] bg-gray-200 md:py-1 py-0 md:px-4 px-2 xl:text-2xl md:text-xl text-base text-gray-900 tracking-widest rounded-r-4xl flex justify-between items-center md:mr-auto md:mx-0 mx-auto' onClick={() => setIsTextVisible(!isTextVisible)}>Lee mi historia <i className='bx bx-book-open'></i></button>
+        <button className='xl:w-[400px] md:w-[300px] w-[270px] bg-gray-200 md:py-1 py-0 md:px-4 px-2 xl:text-2xl md:text-xl text-base text-gray-900 tracking-widest rounded-r-4xl flex justify-between items-center md:mr-auto md:mx-0 mx-auto' onClick={() => setIsTextVisible(!isTextVisible)} onMouseEnter={() => setRoadImageOpacity(0.8)} onMouseLeave={() => setRoadImageOpacity(0.5)} >{isTextVisible ? 'Oculta mi historia' : 'Lee mi historia'} <i className={`bx ${isTextVisible ? 'bx-book-alt' : 'bx-book-open'}`}></i></button>
+        <div className='flex md:gap-12 gap-2 mr-auto'>
+          {socialIcons.map((social, index) => (
+            <a href="#" key={index} className='xl:text-3xl md:text-2xl text-yellow-500 hovr:text-white transition-colors duration-500'><i className={social.icon}></i></a>
+          ))}
+        </div>
         <div className='lg:w-[600px] md:w-[500px] w-[350px] absolute left-1/2 -translate-x-1/2 -z-10'>
-          <img src="images/road.png" alt="Road Image" className='w-full mx-auto' />
+          <img src="images/road.png" alt="Road Image" className='w-full mx-auto transition-opacity duration-300' style={{opacity: roadImageOpacity}}/>
           <div className={`xl:h-[150px] h-[100px] px-3 xl:text-lg md:text-base text-xs font-light text-gray-200 text-justify tracking-wide overflow-y-auto transform origin-top custom-scrollbar ${isTextVisible ? 'scale-y-100' : 'scale-y-0'} transition-transform duration-300`}>
             <p className='xl:py-3 py-1 px-1 [&::first-letter]:text-[30px] [&::first-letter]:ml-5 [&::first-letter]:text-yellow-500'>{aboutText}</p>
           </div>
