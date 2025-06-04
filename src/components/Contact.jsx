@@ -1,4 +1,6 @@
 import React from 'react'
+import NavigationCircles from './NavigationCircles'
+
 
 const Contact = () => {
   return (
@@ -9,6 +11,7 @@ const Contact = () => {
         <textarea placeholder="Mensaje" className='md:w-[500px] w-[300px] h-13 pl-3 text-lg outline-0 border border-red-500 dark:border-yellow-500 placeholder-gray-600 dark:placeholder-yellow-500/50 min-h-[100px] max-h-[200px] resize-y p-3 transition-colors duration-500'></textarea>
         <input type="submit" value='Enviar' className='md:w-[500px] w-[300px] h-13 pl-3 text-lg outline-0 bg-red-500 dark:bg-yellow-500 text-white dark:text-gray-900 uppercase font-extrabold cursor-pointer tracking-wide shadow-md shadow-gray-700/20 transition-colors duration-500' />
       </form>
+      <NavigationCircles section="contact"/>
     </div>
   )
 }

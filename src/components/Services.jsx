@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { skillCards } from '../data/index'
+import NavigationCircles from './NavigationCircles'
+
 
 const Services = () => {
   const [hoveredCardIndex, setHoveredCardIndex] = useState(null)
@@ -55,6 +57,7 @@ const Services = () => {
             </div>
         ))}
       </div>
+      <NavigationCircles section="services"/>
     </div>
   )
 }
