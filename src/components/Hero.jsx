@@ -27,8 +27,8 @@ const Hero = () => {
     <div id='home' className='w-full h-screen flex flex-col justify-center items-center isolate relative z-10'>
       <Navbar />
       <div className='flex flex-col md:items-center items-start xl:gap-y-10 gap-y-3 xl:mb-0 md:mb-20 mb-0'>
-        <h1 className='flex flex-col xl:space-y-8 md:space-y-4 space-y-2 xl:text-6xl md:text-4xl text-3xl md:font-normal font-bolder'>
-          <span className='flex'>
+        <h1 className='flex flex-col xl:space-y-8 md:space-y-4 space-y-2 xl:text-6xl md:text-4xl text-3xl md:font-normal font-bolder mt-8 md:mt-0'>
+          <span className='flex mx-auto md:mx-0'>
             {letters.map((letter, index) => (
               <span key={index} className='inline-block md:w-38 w-32 xl:-mr-20 -mr-24 relative' onMouseEnter={() => setHoveredLetter(index)} onMouseLeave={() => setHoveredLetter(null)}>
                 {letter.char}
@@ -36,12 +36,12 @@ const Hero = () => {
               </span>
             ))}
           </span>
-          <span className='xl:text-6xl md:text-4xl text-2xl tracking-wider xl:py-4 py-2 overflow-hidden'>
-            Soy desarrollador{' '} <span className={`inline-block xl:w-[380px] md:w-[240px] w-[160px] lg:ml-6 ml-2 font-extrabold transform origin-left transition-transform duration-300 ease-out ${isRotating ? 'rotate-[100deg]' : 'rotate-0'}`}>{currentText}</span>
+          <span className='xl:text-6xl md:text-4xl text-2xl tracking-wider xl:py-4 py-2 overflow-hidden text-center'>
+            Soy desarrollador{' '} <span className={`inline-block xl:w-[380px] md:w-[240px] w-[160px] lg:ml-6 ml-2 font-extrabold transform origin-left transition-transform duration-300 ease-out ${isRotating ? 'hidden md:rotate-[100deg]' : 'rotate-0'}`}>{currentText}</span>
           </span>
         </h1>
         <button className='xl:w-[400px] md:w-[300px] w-[270px] bg-gray-900 dark:bg-gray-200 md:py-1 py-0 md:px-4 px-2 xl:text-2xl md:text-xl text-base text-white dark:text-gray-900 tracking-widest rounded-r-4xl flex justify-between items-center md:mr-auto md:mx-0 mx-auto transition-colors duration-500' onClick={() => setIsTextVisible(!isTextVisible)} onMouseEnter={() => setRoadImageOpacity(0.8)} onMouseLeave={() => setRoadImageOpacity(0.5)} >{isTextVisible ? 'Oculta mi historia' : 'Lee mi historia'} <i className={`bx ${isTextVisible ? 'bx-book-alt' : 'bx-book-open'}`}></i></button>
-        <div className='flex md:gap-12 gap-2 mr-auto'>
+        <div className='flex md:gap-12 gap-2 mr-auto absolute md:relative left-4 md:left-auto top-20 md:top-auto flex-col md:flex-row'>
           {socialIcons.map((social, index) => (
             <a href="#" key={index} className='xl:text-3xl md:text-2xl text-red-500 dark:text-yellow-500 dark:hover:text-white hover:text-gray-900 transition-colors duration-500'><i className={social.icon}></i></a>
           ))}
