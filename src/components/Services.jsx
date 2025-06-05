@@ -35,7 +35,12 @@ const Services = () => {
                 <div className='p-3 bg-gray-200 dark:bg-gray-800 transition-colors duration-500'>
                     <i className={`${card.icon} md:text-4xl text-3xl text-gray-900 dark:text-white transition-colors duration-500`}></i>
                     <h3 className='md:text-2xl text-xl font-bold my-4 text-red-500 dark:text-yellow-500 transition-colors duration-500'>{card.title}</h3>
-                    <p className='text-gray-900 dark:text-white md:h-28 h-24 md:text-base text-sm font-light overflow-y-auto custom-scrollbar pr-2 transition-colors duration-500'>{card.description}</p>
+                    <p className='text-gray-900 dark:text-white md:h-28 h-24 md:text-base text-sm font-light overflow-y-auto custom-scrollbar pr-2 transition-colors duration-500'>{card.description.split('\n').map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}</p>
                 </div>
                 <div className={`w-full absolute left-0 ${getPositionClass(card)} flex flex-col gap-y-5 py-4 transition-all duration-300 -z-10 ${hoveredCardIndex === index && `${getHoverPositionClass(card)}`}`}>
                     {isLargeScreen && card.hoverPosition.large === 'top' && (

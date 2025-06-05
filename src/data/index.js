@@ -27,8 +27,13 @@ export const skillCards = [
   {
   icon: 'bx bx-code-alt',
   title: 'Front-End Dev',
-  description:
-    'Tengo experiencia sólida en desarrollo front-end utilizando HTML, CSS y JavaScript. Además, he trabajado con frameworks modernos como Angular y React para construir interfaces dinámicas, responsivas y orientadas a la experiencia del usuario. Me enfoco en rendimiento, accesibilidad y buenas prácticas de desarrollo.',
+  description: `Tengo experiencia sólida en desarrollo front-end utilizando HTML, CSS y JavaScript. Además, he trabajado con frameworks modernos como Angular y React para construir interfaces dinámicas, responsivas y orientadas a la experiencia del usuario. Me enfoco en rendimiento, accesibilidad y buenas prácticas de desarrollo.
+
+1. Ineffabile Pizza: Proyecto de fin de grado (TFG) en el que se desarrolló una web de pedidos online para una pizzería ficticia. Utilizamos HTML, CSS y JavaScript para el frontend y Angular para la zona de administración (back office).
+
+2. GTA VI Characters: Aplicación realizada con Next.js como parte de una exploración técnica personal. El objetivo era experimentar con scroll suave utilizando Lenis y animaciones fluidas con Framer Motion, basándome en la temática de personajes del videojuego.
+
+3. Sax APP: Aplicación en desarrollo destinada al Ayuntamiento de Sax y sus ciudadanos. El objetivo es centralizar información municipal, eventos y servicios para facilitar la comunicación con los residentes.`,
   projectCount: 3,
   projectLinks: [
       'https://ineffabile-pizza.vercel.app/',
@@ -44,7 +49,7 @@ export const skillCards = [
   icon: 'bx bx-server',
   title: 'Back-End Dev',
   description:
-    'Como desarrollador back-end, tengo amplios conocimientos en Node.js y JavaScript. He trabajado en la creación de APIs, gestión de autenticaciones, procesos asincrónicos y lógica de negocio para aplicaciones escalables y seguras. Me preocupo por la eficiencia del código y la integración fluida con el front-end.',
+    `Como desarrollador back-end, tengo amplios conocimientos en Node.js y JavaScript. He trabajado en la creación de APIs, gestión de autenticaciones, procesos asincrónicos y lógica de negocio para aplicaciones escalables y seguras. Me preocupo por la eficiencia del código y la integración fluida con el front-end.`,
   projectCount: 2,
   projectLinks: [
       'https://ineffabile-pizza.vercel.app/',
