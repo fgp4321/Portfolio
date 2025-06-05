@@ -33,7 +33,7 @@ export const skillCards = [
   projectLinks: [
       'https://ineffabile-pizza.vercel.app/',
       'https://gtavi-characters-fan-page.vercel.app/',
-      'https://miportfolio.com/proyecto-frontend-3',
+      'https://github.com/fgp4321/Sax-APP',
     ],
   hoverPosition: {
     large: 'bottom',
@@ -47,8 +47,8 @@ export const skillCards = [
     'Como desarrollador back-end, tengo amplios conocimientos en Node.js y JavaScript. He trabajado en la creación de APIs, gestión de autenticaciones, procesos asincrónicos y lógica de negocio para aplicaciones escalables y seguras. Me preocupo por la eficiencia del código y la integración fluida con el front-end.',
   projectCount: 2,
   projectLinks: [
-      'https://miportfolio.com/proyecto-frontend-1',
-      'https://miportfolio.com/proyecto-frontend-2',
+      'https://ineffabile-pizza.vercel.app/',
+      'https://github.com/fgp4321/Sax-APP',
     ],
   hoverPosition: {
     large: 'bottom',
@@ -61,10 +61,10 @@ export const skillCards = [
   description:
     'Domino tanto bases de datos relacionales (MySQL, PostgreSQL) como no relacionales (MongoDB). Tengo experiencia en diseño de esquemas eficientes, optimización de consultas y gestión de grandes volúmenes de datos, asegurando integridad y rendimiento en las aplicaciones que desarrollo.',
   projectCount: 2,
-    projectLinks: [
-      'https://miportfolio.com/proyecto-frontend-1',
-      'https://miportfolio.com/proyecto-frontend-2',
-    ],
+  projectLinks: [
+    'https://ineffabile-pizza.vercel.app/',
+    'https://github.com/fgp4321/Sax-APP',
+  ],
   hoverPosition: {
     large: 'bottom',
     small: 'bottom',
@@ -75,7 +75,7 @@ export const skillCards = [
   title: 'Ecosistema Microsoft',
   description:
     'He trabajado extensamente con herramientas del ecosistema Microsoft, incluyendo Excel, Outlook, SharePoint y Teams. Conozco bien su integración en entornos corporativos y cómo aprovechar sus funcionalidades para mejorar la productividad, automatizar procesos y colaborar en equipos.',
-  projectCount: 3,
+  projectCount: 0,
   hoverPosition: {
     large: 'top',
     small: 'bottom',
@@ -87,6 +87,10 @@ export const skillCards = [
   description:
     'Tengo amplia experiencia con CMS, especialmente WordPress. He desarrollado sitios a medida, personalizado temas y plugins, y gestionado contenido optimizado para SEO. Esto me permite crear soluciones flexibles, eficientes y fáciles de mantener para diferentes tipos de clientes y proyectos.',
   projectCount: 2,
+  projectLinks: [
+    'https://www.sax.es/',
+    'https://vysan.es/es/',
+  ],
   hoverPosition: {
     large: 'top',
     small: 'bottom',
@@ -98,6 +102,9 @@ export const skillCards = [
   description:
     'Conozco el uso de contenedores con Docker para crear entornos de desarrollo reproducibles y eficientes. Además, tengo experiencia en la orquestación con Kubernetes para desplegar aplicaciones escalables. Esta habilidad me permite optimizar flujos DevOps y garantizar estabilidad en producción.',
   projectCount: 1,
+  projectLinks: [
+    'https://ineffabile-pizza.vercel.app/',
+  ],
   hoverPosition: {
     large: 'top',
     small: 'bottom',

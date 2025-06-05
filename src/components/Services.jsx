@@ -40,8 +40,16 @@ const Services = () => {
                 <div className={`w-full absolute left-0 ${getPositionClass(card)} flex flex-col gap-y-5 py-4 transition-all duration-300 -z-10 ${hoveredCardIndex === index && `${getHoverPositionClass(card)}`}`}>
                     {isLargeScreen && card.hoverPosition.large === 'top' && (
                       <div className='flex justify-between'>
-                        {[...Array(card.projectCount)].map((_, index) => (
-                          <a href="#" key={index} className='text-lg bg-red-500 dark:bg-yellow-500 w-10 aspect-square grid place-items-center text-white rounded-full transition-colors'>{index + 1}</a>
+                        {card.projectLinks?.map((link, projectIndex) => (
+                          <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            key={projectIndex}
+                            className="text-lg bg-red-500 dark:bg-yellow-500 w-10 aspect-square grid place-items-center text-white rounded-full transition-colors"
+                          >
+                            {projectIndex + 1}
+                          </a>
                         ))}
                       </div>
                     )}
