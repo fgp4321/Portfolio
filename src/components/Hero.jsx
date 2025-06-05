@@ -43,7 +43,15 @@ const Hero = () => {
         <button className='xl:w-[400px] md:w-[300px] w-[270px] bg-gray-900 dark:bg-gray-200 md:py-1 py-0 md:px-4 px-2 xl:text-2xl md:text-xl text-base text-white dark:text-gray-900 tracking-widest rounded-r-4xl flex justify-between items-center md:mr-auto md:mx-0 mx-auto transition-colors duration-500' onClick={() => setIsTextVisible(!isTextVisible)} onMouseEnter={() => setRoadImageOpacity(0.8)} onMouseLeave={() => setRoadImageOpacity(0.5)} >{isTextVisible ? 'Oculta mi historia' : 'Lee mi historia'} <i className={`bx ${isTextVisible ? 'bx-book-alt' : 'bx-book-open'}`}></i></button>
         <div className='flex md:gap-12 gap-2 mr-auto absolute md:relative left-4 md:left-auto top-20 md:top-auto flex-col md:flex-row'>
           {socialIcons.map((social, index) => (
-            <a href="#" key={index} className='xl:text-3xl md:text-2xl text-red-500 dark:text-yellow-500 dark:hover:text-white hover:text-gray-900 transition-colors duration-500'><i className={social.icon}></i></a>
+            <a
+              href={social.url}
+              key={index}
+              target="_blank"
+              rel="noopener noreferrer"
+              className='xl:text-3xl md:text-2xl text-red-500 dark:text-yellow-500 dark:hover:text-white hover:text-gray-900 transition-colors duration-500'
+            >
+              <i className={social.icon}></i>
+            </a>
           ))}
         </div>
         <div className='lg:w-[600px] md:w-[500px] w-[350px] absolute left-1/2 -translate-x-1/2 -z-10'>

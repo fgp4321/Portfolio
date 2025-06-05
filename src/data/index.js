@@ -9,10 +9,8 @@ export const letters = [
 export const professionTexts = ['Front End', 'Back End', 'Full Stack']
 
 export const socialIcons = [
-  { icon: 'bx bxl-instagram-alt' },
-  { icon: 'bx bxl-youtube' },
-  { icon: 'bx bxl-twitter' },
-  { icon: 'bx bxl-facebook-square' },
+  { icon: 'bx bxl-linkedin-square', url: 'https://www.linkedin.com/in/francisco-gonz%C3%A1lez-poveda-502692279/' },
+  { icon: 'bx bxl-github', url: 'https://github.com/fgp4321' },
 ]
 
 export const aboutText = `Francisco González, desarrollador web full stack, apasionado por construir soluciones útiles y eficientes desde la interfaz hasta el servidor. A lo largo de mi carrera he trabajado con frameworks frontend como Angular y React, creando interfaces modernas, dinámicas y pensadas para el usuario final.
@@ -27,69 +25,69 @@ Pero más allá de las tecnologías, lo que me define es la curiosidad constante
 
 export const skillCards = [
   {
-    icon: 'bx bx-pen',
-    title: 'Design',
-    description:
-      'Design is all about creating visually appealing and user-friendly interfaces. I specialize in UI/UX design, ensuring every project balances aesthetics with functionality. Using tools like Figma and Adobe XD, I craft intuitive layouts that enhance user experience. From wireframes to high-fidelity prototypes, I focus on clean, minimal, and modern designs tailored for web and mobile applications.',
-    projectCount: 3,
-    hoverPosition: {
-      large: 'bottom',
-      small: 'bottom',
-    },
+  icon: 'bx bx-code-alt',
+  title: 'Front-End Dev',
+  description:
+    'Tengo experiencia sólida en desarrollo front-end utilizando HTML, CSS y JavaScript. Además, he trabajado con frameworks modernos como Angular y React para construir interfaces dinámicas, responsivas y orientadas a la experiencia del usuario. Me enfoco en rendimiento, accesibilidad y buenas prácticas de desarrollo.',
+  projectCount: 3,
+  hoverPosition: {
+    large: 'bottom',
+    small: 'bottom',
   },
-  {
-    icon: 'bx bx-camera',
-    title: 'Photography',
-    description:
-      'Photography is an essential part of digital content creation, capturing high-quality visuals that enhance branding and storytelling. I have experience in portrait, landscape, and product photography, ensuring every image is edited and optimized for the web. Understanding lighting, composition, and post-processing allows me to create compelling images that elevate visual communication across various platforms.',
-    projectCount: 4,
-    hoverPosition: {
-      large: 'bottom',
-      small: 'bottom',
-    },
+},
+{
+  icon: 'bx bx-server',
+  title: 'Back-End Dev',
+  description:
+    'Como desarrollador back-end, tengo amplios conocimientos en Node.js y JavaScript. He trabajado en la creación de APIs, gestión de autenticaciones, procesos asincrónicos y lógica de negocio para aplicaciones escalables y seguras. Me preocupo por la eficiencia del código y la integración fluida con el front-end.',
+  projectCount: 3,
+  hoverPosition: {
+    large: 'bottom',
+    small: 'bottom',
   },
-  {
-    icon: 'bx bxs-file-doc',
-    title: 'Front-End Dev',
-    description:
-      'Front-end development is about bringing designs to life through clean and efficient code. I specialize in HTML, CSS, and JavaScript, along with frameworks like React to build dynamic and interactive web applications. My focus is on performance, accessibility, and responsiveness, ensuring that every website functions flawlessly across all devices and screen sizes.',
-    projectCount: 4,
-    hoverPosition: {
-      large: 'bottom',
-      small: 'bottom',
-    },
+},
+{
+  icon: 'bx bx-data',
+  title: 'Bases de Datos',
+  description:
+    'Domino tanto bases de datos relacionales (MySQL, PostgreSQL) como no relacionales (MongoDB). Tengo experiencia en diseño de esquemas eficientes, optimización de consultas y gestión de grandes volúmenes de datos, asegurando integridad y rendimiento en las aplicaciones que desarrollo.',
+  projectCount: 3,
+  hoverPosition: {
+    large: 'bottom',
+    small: 'bottom',
   },
-  {
-    icon: 'bx bxs-devices',
-    title: 'RWD',
-    description:
-      "In today's digital world, ensuring a seamless user experience across all devices is crucial. I implement responsive design techniques using modern CSS frameworks like Tailwind CSS and Bootstrap. By employing fluid grids, flexible layouts, and media queries, I create web pages that look great and function perfectly on desktops, tablets, and smartphones.",
-    projectCount: 3,
-    hoverPosition: {
-      large: 'top',
-      small: 'bottom',
-    },
+},
+{
+  icon: 'bx bxl-microsoft',
+  title: 'Ecosistema Microsoft',
+  description:
+    'He trabajado extensamente con herramientas del ecosistema Microsoft, incluyendo Excel, Outlook, SharePoint y Teams. Conozco bien su integración en entornos corporativos y cómo aprovechar sus funcionalidades para mejorar la productividad, automatizar procesos y colaborar en equipos.',
+  projectCount: 3,
+  hoverPosition: {
+    large: 'top',
+    small: 'bottom',
   },
-  {
-    icon: 'bx bx-data',
-    title: 'Back-End Dev',
-    description:
-      'Back-end development powers the functionality behind web applications. I work with Node.js and databases like MongoDB and PostgreSQL to build secure and scalable server-side applications. Whether handling authentication, managing API requests, or optimizing database queries, I ensure data is processed efficiently and securely to support seamless front-end interactions.',
-    projectCount: 3,
-    hoverPosition: {
-      large: 'top',
-      small: 'bottom',
-    },
+},
+{
+  icon: 'bx bx-world',
+  title: 'CMS & WordPress',
+  description:
+    'Tengo amplia experiencia con CMS, especialmente WordPress. He desarrollado sitios a medida, personalizado temas y plugins, y gestionado contenido optimizado para SEO. Esto me permite crear soluciones flexibles, eficientes y fáciles de mantener para diferentes tipos de clientes y proyectos.',
+  projectCount: 3,
+  hoverPosition: {
+    large: 'top',
+    small: 'bottom',
   },
-  {
-    icon: 'bx bxl-github',
-    title: 'Git Version Control',
-    description:
-      'Version control is essential for modern web development, and Git is my go-to tool for managing code efficiently. I use GitHub for collaboration, handling pull requests, merging branches, and tracking project changes. Whether working solo or in a team, I ensure code is well-documented, structured, and easily maintainable through proper versioning practices.',
-    projectCount: 3,
-    hoverPosition: {
-      large: 'top',
-      small: 'bottom',
-    },
+},
+{
+  icon: 'bx bxl-docker',
+  title: 'Contenedores & Virtualización',
+  description:
+    'Conozco el uso de contenedores con Docker para crear entornos de desarrollo reproducibles y eficientes. Además, tengo experiencia en la orquestación con Kubernetes para desplegar aplicaciones escalables. Esta habilidad me permite optimizar flujos DevOps y garantizar estabilidad en producción.',
+  projectCount: 3,
+  hoverPosition: {
+    large: 'top',
+    small: 'bottom',
   },
+},
 ]
