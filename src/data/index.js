@@ -30,6 +30,11 @@ export const skillCards = [
   description:
     'Tengo experiencia sólida en desarrollo front-end utilizando HTML, CSS y JavaScript. Además, he trabajado con frameworks modernos como Angular y React para construir interfaces dinámicas, responsivas y orientadas a la experiencia del usuario. Me enfoco en rendimiento, accesibilidad y buenas prácticas de desarrollo.',
   projectCount: 3,
+  projectLinks: [
+      'https://ineffabile-pizza.vercel.app/',
+      'https://gtavi-characters-fan-page.vercel.app/',
+      'https://miportfolio.com/proyecto-frontend-3',
+    ],
   hoverPosition: {
     large: 'bottom',
     small: 'bottom',
@@ -40,7 +45,11 @@ export const skillCards = [
   title: 'Back-End Dev',
   description:
     'Como desarrollador back-end, tengo amplios conocimientos en Node.js y JavaScript. He trabajado en la creación de APIs, gestión de autenticaciones, procesos asincrónicos y lógica de negocio para aplicaciones escalables y seguras. Me preocupo por la eficiencia del código y la integración fluida con el front-end.',
-  projectCount: 3,
+  projectCount: 2,
+  projectLinks: [
+      'https://miportfolio.com/proyecto-frontend-1',
+      'https://miportfolio.com/proyecto-frontend-2',
+    ],
   hoverPosition: {
     large: 'bottom',
     small: 'bottom',
@@ -51,7 +60,11 @@ export const skillCards = [
   title: 'Bases de Datos',
   description:
     'Domino tanto bases de datos relacionales (MySQL, PostgreSQL) como no relacionales (MongoDB). Tengo experiencia en diseño de esquemas eficientes, optimización de consultas y gestión de grandes volúmenes de datos, asegurando integridad y rendimiento en las aplicaciones que desarrollo.',
-  projectCount: 3,
+  projectCount: 2,
+    projectLinks: [
+      'https://miportfolio.com/proyecto-frontend-1',
+      'https://miportfolio.com/proyecto-frontend-2',
+    ],
   hoverPosition: {
     large: 'bottom',
     small: 'bottom',
@@ -73,7 +86,7 @@ export const skillCards = [
   title: 'CMS & WordPress',
   description:
     'Tengo amplia experiencia con CMS, especialmente WordPress. He desarrollado sitios a medida, personalizado temas y plugins, y gestionado contenido optimizado para SEO. Esto me permite crear soluciones flexibles, eficientes y fáciles de mantener para diferentes tipos de clientes y proyectos.',
-  projectCount: 3,
+  projectCount: 2,
   hoverPosition: {
     large: 'top',
     small: 'bottom',
@@ -84,7 +97,7 @@ export const skillCards = [
   title: 'Contenedores & Virtualización',
   description:
     'Conozco el uso de contenedores con Docker para crear entornos de desarrollo reproducibles y eficientes. Además, tengo experiencia en la orquestación con Kubernetes para desplegar aplicaciones escalables. Esta habilidad me permite optimizar flujos DevOps y garantizar estabilidad en producción.',
-  projectCount: 3,
+  projectCount: 1,
   hoverPosition: {
     large: 'top',
     small: 'bottom',
