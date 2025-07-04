@@ -13,9 +13,9 @@ export const socialIcons = [
   { icon: 'bx bxl-github', url: 'https://github.com/fgp4321' },
 ]
 
-export const aboutText = `Francisco González, desarrollador web full stack, apasionado por construir soluciones útiles y eficientes desde la interfaz hasta el servidor. A lo largo de mi carrera he trabajado con frameworks frontend como Angular y React, creando interfaces modernas, dinámicas y pensadas para el usuario final.
+export const aboutText = `Francisco González, desarrollador web full stack, apasionado por construir soluciones útiles y eficientes desde la interfaz hasta el servidor. A lo largo de mi trayectoria profesional he trabajado con frameworks frontend como Angular y React, creando interfaces modernas, dinámicas y pensadas para el usuario final.
 
-En el backend, domino Node.js y Java, con una mentalidad enfocada en arquitecturas limpias, escalabilidad y buenas prácticas. Desarrollo APIs RESTful, estructuro la lógica de negocio y diseño sistemas pensando tanto en el presente como en su evolución futura.
+En el backend, domino Node.js y Java, con una mentalidad enfocada en arquitecturas limpias, escalabilidad y buenas prácticas. Desarrollo APIs RESTful, estructuro la lógica de negocio y diseño sistemas pensando tanto en el presente como en su evolución a futuro.
 
 Trabajo con bases de datos relacionales (MySQL) y NoSQL (MongoDB), optimizando consultas, diseñando estructuras sólidas y asegurando la integridad de los datos. También tengo experiencia con Elasticsearch, lo que me permite implementar búsquedas avanzadas, indexación eficiente y experiencias de navegación más inteligentes.
 
@@ -87,7 +87,7 @@ export const skillCards = [
   icon: 'bx bxl-microsoft',
   title: 'Ecosistema Microsoft',
   description:
-    'He trabajado extensamente con herramientas del ecosistema Microsoft, incluyendo Excel, Outlook, SharePoint y Teams. Conozco bien su integración en entornos corporativos y cómo aprovechar sus funcionalidades para mejorar la productividad, automatizar procesos y colaborar en equipos.',
+    'He trabajado extensamente con herramientas del ecosistema Microsoft, incluyendo Excel, Outlook, SharePoint y Teams. Conozco bien su integración en entornos corporativos y cómo aprovechar sus funcionalidades para mejorar la productividad, automatizar procesos y colaborar en equipos. Además, tengo experiencia en administración de sistemas con Windows Server y un conocimiento profundo de Active Directory y Azure, lo que me permite gestionar eficientemente infraestructuras híbridas y entornos empresariales.',
   projectCount: 0,
   hoverPosition: {
     large: 'top',
