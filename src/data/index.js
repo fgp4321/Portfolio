@@ -130,3 +130,51 @@ export const skillCards = [
   },
 },
 ]
+
+export const resumeData = {
+  profile: `Entusiasta de la administración de sistemas, la ciberseguridad y el desarrollo de software.
+    Experiencia en mantenimiento y optimización de servidores, análisis técnico y mejora continua
+    de infraestructuras IT. Motivado por aprender nuevas tecnologías y aplicarlas en soluciones
+    eficientes y seguras.`,
+
+  contact: [
+    { label: 'Email', value: 'fgp4321@gmail.com', link: 'mailto:fgp4321@gmail.com' },
+    { label: 'Teléfono', value: '+34 644 98 01 05', link: 'tel:+34644980105' },
+    { label: 'Ubicación', value: 'Villena (Alicante)' },
+    { label: 'GitHub', value: 'github.com/fgp4321', link: 'https://github.com/fgp4321' },
+    { label: 'LinkedIn', value: 'LinkedIn', link: 'https://www.linkedin.com/in/francisco-gonz%C3%A1lez-poveda-502692279/' },
+  ],
+
+  experience: [
+    {
+      company: 'Ayuntamiento de Sax',
+      period: 'Dic 2024 - Actualidad',
+      role: 'Técnico informático',
+      description: 'Microsoft 365, React, automatización con Power Automate, administración de sistemas y redes.'
+    },
+    {
+      company: 'Delfín Servicio Integral, S.L.U',
+      period: 'Oct 2023 - Jun 2024',
+      role: 'Desarrollador web',
+      description: 'Virtualización, microservicios, Docker, Kubernetes, NodeJS, React, AWS, documentación API.'
+    },
+    {
+      company: 'Vysan Componentes Electrónicos S.L.',
+      period: 'Mar 2022 - Jun 2022',
+      role: 'Técnico informático',
+      description: 'Mantenimiento web, soporte técnico, gestión de almacén, automatización de procesos.'
+    }
+  ],
+
+  education: [
+    'Curso de Especialización en Ciberseguridad (Curso 2025-2026)',
+    'Técnico Superior en Desarrollo de Aplicaciones Web — I.E.S. Hermanos Amorós (Curso 2022-2024)',
+    'Técnico en Sistemas Microinformáticos y Redes — I.E.S. Hermanos Amorós (Curso 2020-2022)',
+  ],
+
+  certifications: [
+    'Introducción a la Ciberseguridad — Cisco Networking Academy',
+    'AZ-900: Microsoft Azure Fundamentals',
+    'Hacking ético',
+  ]
+}

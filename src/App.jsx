@@ -1,8 +1,10 @@
 import { React, useState, useEffect } from "react";
 import Hero from "./components/Hero";
+import Resume from "./components/Resume";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Loader from "./components/Loader";
+import { Analytics } from "@vercel/analytics/react"
 
 
 import { ThemeProvider } from "./context/ThemeContext";
@@ -25,8 +27,11 @@ const App = () => {
         {!isLoading && (
           <>
             <Hero />
+            <Resume />
             <Services />
             <Contact />
+
+            <Analytics />
           </>
         )}
       </div>

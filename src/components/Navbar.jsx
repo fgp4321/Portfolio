@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "services", "contact"]
+      const sections = ["home", "resume", "services", "contact"]
       sections.forEach((sectionId) => {
         const element = document.getElementById(sectionId)
         if (element) {
@@ -45,20 +45,23 @@ const Navbar = () => {
         <a href="#home" className={`group lg:text-lg md:text-base text-sm font-light text-red-500 dark:text-yellow-500 lg:mr-12 mr-8 tracking-wide relative ${activeSection === "home" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'home')}>Inicio
             <span className={`absolute -bottom-1 left-0 w-full h-[1px] text-red-500 dark:text-yellow-500 transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "home" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
         </a>
+        <a href="#resume" className={`group lg:text-lg md:text-base text-sm font-light text-gray-600 dark:text-white lg:mr-12 mr-8 tracking-wide relative ${activeSection === "resume" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'resume')}>Currículum
+            <span className={`absolute -bottom-1 left-0 w-full h-[1px] bg-gray-600 dark:bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "resume" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
+        </a>
         <a href="#services" className={`group lg:text-lg md:text-base text-sm font-light text-gray-600 dark:text-white lg:mr-12 mr-8 tracking-wide relative ${activeSection === "services" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'services')}>Habilidades
             <span className={`absolute -bottom-1 left-0 w-full h-[1px] bg-gray-600 dark:bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "services" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
         </a>
         <a href="#contact" className={`group lg:text-lg md:text-base text-sm font-light text-gray-600 dark:text-white lg:mr-12 mr-8 tracking-wide relative ${activeSection === "contact" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'contact')}>Contacto
             <span className={`absolute -bottom-1 left-0 w-full h-[1px] bg-gray-600 dark:bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "contact" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
         </a>
-        <a 
+        {/* <a 
           href="/CV-Francisco-Gonzalez.pdf" 
           download 
           className="group inline-flex items-center gap-2 lg:text-lg md:text-base text-sm font-light text-white dark:text-gray-900 bg-red-500 dark:bg-yellow-500 px-4 py-1 rounded-xl shadow hover:brightness-110 transition duration-300 tracking-wide"
         >
           CV
           <i className="bx bx-download text-xl"></i>
-        </a>
+        </a> */}
       </div>
     </div>
   )
