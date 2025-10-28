@@ -148,7 +148,7 @@ export const resumeData = {
   experience: [
     {
       company: 'Ayuntamiento de Sax',
-      period: 'Dic 2024 - Actualidad',
+      period: 'Dic 2024 - Dic 2025',
       role: 'Técnico informático',
       description: 'Microsoft 365, React, automatización con Power Automate, administración de sistemas y redes.'
     },
