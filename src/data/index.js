@@ -147,27 +147,32 @@ export const resumeData = {
 
   experience: [
     {
+      company: 'Diputación Provincial de Alicante',
+      period: 'Dic 2025 - Actualidad',
+      role: 'Técnico Superior de Desarrollo',
+      description: 'Visual Basic, .NET, desarrollo de aplicaciones multiplataforma, documentación, soporte de GLPI.'
+    },
+    {
       company: 'Ayuntamiento de Sax',
       period: 'Dic 2024 - Dic 2025',
-      role: 'Técnico informático',
+      role: 'Técnico Informático',
       description: 'Microsoft 365, React, automatización con Power Automate, administración de sistemas y redes.'
     },
     {
       company: 'Delfín Servicio Integral, S.L.U',
       period: 'Oct 2023 - Jun 2024',
-      role: 'Desarrollador web',
+      role: 'Desarrollador Web',
       description: 'Virtualización, microservicios, Docker, Kubernetes, NodeJS, React, AWS, documentación API.'
     },
     {
       company: 'Vysan Componentes Electrónicos S.L.',
       period: 'Mar 2022 - Jun 2022',
-      role: 'Técnico informático',
+      role: 'Técnico Informático',
       description: 'Mantenimiento web, soporte técnico, gestión de almacén, automatización de procesos.'
     }
   ],
 
   education: [
-    'Curso de Especialización en Ciberseguridad (Curso 2025-2026)',
     'Técnico Superior en Desarrollo de Aplicaciones Web — I.E.S. Hermanos Amorós (Curso 2022-2024)',
     'Técnico en Sistemas Microinformáticos y Redes — I.E.S. Hermanos Amorós (Curso 2020-2022)',
   ],
@@ -176,5 +181,10 @@ export const resumeData = {
     'Introducción a la Ciberseguridad — Cisco Networking Academy',
     'AZ-900: Microsoft Azure Fundamentals',
     'Hacking ético',
+  ],
+
+  misc: [
+    'Permiso B y A2',
+    
   ]
 }

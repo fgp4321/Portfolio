@@ -76,6 +76,7 @@ const Resume = () => {
                 ))}
               </ul>
             </section>
+            
           </div>
 
           {/* --- Columna Derecha: Contacto y Certificaciones --- */}
@@ -112,10 +113,23 @@ const Resume = () => {
                 ))}
               </ul>
             </section>
+
+            {/* Sección de Otros */}
+            <section>
+              <h2 className='text-2xl font-bold mb-6 border-l-4 border-red-500 dark:border-yellow-500 pl-4 transition-colors duration-500'>Otros</h2>
+               <ul className='space-y-3'>
+                {resumeData.misc.map((cert, index) => (
+                   <li key={index} className='flex items-start'>
+                    <span className='text-red-500 dark:text-yellow-500 mr-3 mt-1 transition-colors duration-500'><i className='bx bx-car'></i></span>
+                    <span className='text-gray-700 dark:text-gray-300 transition-colors duration-500'>{cert}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
           </aside>
         </div>
         
-        {/* --- NUEVO: Botón de Descarga --- */}
+        {/* --- Botón de Descarga CV --- */}
         <div className='flex justify-center mt-12'>
           <a 
             href="/CV-Francisco-Gonzalez.pdf" 
