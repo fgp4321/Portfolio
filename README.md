@@ -1,12 +1,40 @@
-# React + Vite
+# Portfolio — Francisco González Poveda
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal desplegado en [francisco-gonzalez.me](https://francisco-gonzalez.me) (Vercel).
 
-Currently, two official plugins are available:
+## Tecnología
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 + Vite 6
+- Tailwind CSS 4 (plugin de Vite)
+- EmailJS para el formulario de contacto
+- Vercel Analytics
 
-## Expanding the ESLint configuration
+## Puesta en marcha
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev      # servidor de desarrollo
+npm run build    # genera dist/
+npm run preview  # sirve dist/
+npm run lint
+```
+
+El formulario de contacto necesita estas variables de entorno (en `.env` en local y en el proyecto de Vercel):
+
+```
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
+
+## Estructura
+
+```
+public/            CV en PDF e imágenes
+src/
+  components/      Hero, Resume, Services, Contact, Navbar, Loader…
+  context/         Tema claro/oscuro
+  data/index.js    Todos los textos: sobre mí, habilidades, proyectos, experiencia
+```
+
+Para cambiar textos, proyectos o experiencia basta con editar `src/data/index.js`.
