@@ -1,85 +1,32 @@
-import React, {useState, useEffect} from 'react'
-import { skillCards } from '../data/index'
-import NavigationCircles from './NavigationCircles'
-
+import React from 'react'
+import { skillGroups } from '../data/index'
 
 const Services = () => {
-  const [hoveredCardIndex, setHoveredCardIndex] = useState(null)
-  const [isLargeScreen, setIsLargeScreen] = useState(false)
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth > 1024)
-    }
-
-    checkScreenSize()
-    window.addEventListener('resize', checkScreenSize)
-
-    return () => window.removeEventListener('resize', checkScreenSize)
-  }, [])
-
-  const getPositionClass = (card) => {
-      const position = isLargeScreen ? card.hoverPosition.large : card.hoverPosition.small
-      return position == "bottom" ? "bottom-0" : "top-0"
-  }
-  const getHoverPositionClass = (card) => {
-      const position = isLargeScreen ? card.hoverPosition.large : card.hoverPosition.small
-      return position == "bottom" ? "bottom-full" : "top-full"
-  }
   return (
-    <div id='services' className='min-h-screen flex flex-col justify-center items-center px-4 xl:py-0 py-10'>
-      <h2 className='text-4xl font-light mb-32 xl:mt-0 mt-12'>Habilidades y competencias</h2>
-      <div className='w-full xl:w-[900px] lg:w-[850px] md:w-[600px] grid lg:grid-cols-3 grid-cols-1 lg:gap-12 gap-32 xl:mb-0 mb-16'>
-        {skillCards.map((card, index) => (
-            <div key={index} className='lg:max-w-[280px] md:max-w-w[400px] max-w-[320px] w-full mx-auto rounded-sm ring-2 ring-gray-400/20 shadow-md shadow-gray-700/20 relative isolate' onMouseEnter={() => setHoveredCardIndex(index)} onMouseLeave={() => setHoveredCardIndex(null)}>
-                <div className='p-3 bg-gray-200 dark:bg-gray-800 transition-colors duration-500 min-h-[320px] flex flex-col justify-between'>
-                    <i className={`${card.icon} md:text-4xl text-3xl text-gray-900 dark:text-white transition-colors duration-500`}></i>
-                    <h3 className='md:text-2xl text-xl font-bold my-4 text-red-500 dark:text-yellow-500 transition-colors duration-500'>{card.title}</h3>
-                    <p className='text-gray-900 dark:text-white md:h-40 h-32 md:text-base text-sm font-light overflow-y-auto custom-scrollbar pr-2 transition-colors duration-500'>{card.description.split('\n').map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}</p>
-                </div>
-                <div className={`w-full absolute left-0 ${getPositionClass(card)} flex flex-col gap-y-5 py-4 transition-all duration-300 -z-10 ${hoveredCardIndex === index && `${getHoverPositionClass(card)}`}`}>
-                    {isLargeScreen && card.hoverPosition.large === 'top' && (
-                      <div className='flex justify-between'>
-                        {card.projectLinks?.map((link, projectIndex) => (
-                          <a
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            key={projectIndex}
-                            className="text-lg bg-red-500 dark:bg-yellow-500 w-10 aspect-square grid place-items-center text-white rounded-full transition-colors"
-                          >
-                            {projectIndex + 1}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                    <h2 className='text-2-xl text-center text-gray-900 dark:text-white font-light tracking-wide'>Proyectos</h2>
-                    {(!isLargeScreen || (isLargeScreen && card.hoverPosition.large === 'bottom')) && (
-                      <div className='flex justify-between'>
-                        {card.projectLinks?.map((link, projectIndex) => (
-                          <a
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            key={projectIndex}
-                            className="text-lg bg-red-500 dark:bg-yellow-500 w-10 aspect-square grid place-items-center text-white rounded-full transition-colors"
-                          >
-                            {projectIndex + 1}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                </div>
+    <section id='skills' className='w-full scroll-mt-12 bg-gray-50 dark:bg-gray-900 py-24 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-6xl w-full mx-auto'>
+        <header className='text-center'>
+          <h2 className='text-4xl md:text-5xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 transition-colors duration-500'>
+            Habilidades y <span className='text-red-500 dark:text-yellow-500 transition-colors duration-500'>Competencias</span>
+          </h2>
+        </header>
+
+        <div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {skillGroups.map((group) => (
+            <div key={group.title} className='p-6 bg-gray-200 dark:bg-gray-800 rounded-sm ring-2 ring-gray-400/20 shadow-md shadow-gray-700/20 transition-colors duration-500'>
+              <i className={`${group.icon} text-4xl text-gray-900 dark:text-white transition-colors duration-500`}></i>
+              <h3 className='text-2xl font-bold mt-3 text-red-500 dark:text-yellow-500 transition-colors duration-500'>{group.title}</h3>
+              <p className='mt-2 text-base font-light text-gray-700 dark:text-gray-300 transition-colors duration-500'>{group.summary}</p>
+              <ul className='mt-5 flex flex-wrap gap-2'>
+                {group.items.map((item) => (
+                  <li key={item} className='px-2.5 py-0.5 text-sm font-medium rounded-full bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 ring-1 ring-gray-400/30 transition-colors duration-500'>{item}</li>
+                ))}
+              </ul>
             </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <NavigationCircles section="services"/>
-    </div>
+    </section>
   )
 }
 

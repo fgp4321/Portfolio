@@ -1,141 +1,137 @@
-export const letters = [
-  { char: 'H', img: 'images/person-img-1.jpg', rotate: '-rotate-15' },
-  { char: 'e', img: 'images/person-img-2.jpg', rotate: 'rotate-15' },
-  { char: 'l', img: 'images/person-img-3.jpg', rotate: '-rotate-15' },
-  { char: 'l', img: 'images/person-img-4.jpg', rotate: 'rotate-15' },
-  { char: 'o', img: 'images/person-img-5.jpg', rotate: '-rotate-15' },
+export const sections = [
+  { id: 'home', label: 'Inicio' },
+  { id: 'projects', label: 'Proyectos' },
+  { id: 'resume', label: 'Currículum' },
+  { id: 'skills', label: 'Habilidades' },
+  { id: 'contact', label: 'Contacto' },
 ]
-
-export const professionTexts = ['Front End', 'Back End', 'Full Stack']
 
 export const socialIcons = [
-  { icon: 'bx bxl-linkedin-square', url: 'https://www.linkedin.com/in/francisco-gonz%C3%A1lez-poveda-502692279/' },
-  { icon: 'bx bxl-github', url: 'https://github.com/fgp4321' },
+  { icon: 'bx bxl-linkedin-square', label: 'LinkedIn', url: 'https://www.linkedin.com/in/francisco-gonz%C3%A1lez-poveda-502692279/' },
+  { icon: 'bx bxl-github', label: 'GitHub', url: 'https://github.com/fgp4321' },
 ]
 
-export const aboutText = `Francisco González, desarrollador web full stack, apasionado por construir soluciones útiles y eficientes desde la interfaz hasta el servidor. A lo largo de mi trayectoria profesional he trabajado con frameworks frontend como Angular y React, creando interfaces modernas, dinámicas y pensadas para el usuario final.
+export const hero = {
+  eyebrow: 'Desarrollador web full stack',
+  firstName: 'Francisco',
+  lastName: 'González Poveda',
+  lead: 'Desarrollo aplicaciones web de principio a fin, de la interfaz a la base de datos. Ahora mismo lo hago en la Diputación Provincial de Alicante.',
+  about: [
+    'Empecé en sistemas y redes y de ahí pasé al desarrollo web, así que me muevo con soltura tanto en el código como en la infraestructura que lo sostiene. He trabajado con React y Angular en el frontend, con Node.js y .NET en el backend y con Docker y Kubernetes para desplegarlo.',
+    'En los últimos años he trabajado sobre todo para la administración pública: primero en el Ayuntamiento de Sax y ahora en la Diputación de Alicante.',
+  ],
+  facts: [
+    { label: 'Ahora', value: 'Técnico Superior de Desarrollo', detail: 'Diputación Provincial de Alicante · desde dic. 2025' },
+    { label: 'Trabajo con', value: 'React, Node.js, .NET y SQL', detail: 'Además de Astro, Angular, WordPress y Docker' },
+    { label: 'Formación', value: 'Desarrollo de Aplicaciones Web', detail: 'Técnico Superior · I.E.S. Hermanos Amorós' },
+    { label: 'Ubicación', value: 'Villena (Alicante)' },
+  ],
+}
 
-En el backend, domino Node.js y Java, con una mentalidad enfocada en arquitecturas limpias, escalabilidad y buenas prácticas. Desarrollo APIs RESTful, estructuro la lógica de negocio y diseño sistemas pensando tanto en el presente como en su evolución a futuro.
-
-Trabajo con bases de datos relacionales (MySQL) y NoSQL (MongoDB), optimizando consultas, diseñando estructuras sólidas y asegurando la integridad de los datos. También tengo experiencia con Elasticsearch, lo que me permite implementar búsquedas avanzadas, indexación eficiente y experiencias de navegación más inteligentes.
-
-Además, manejo Docker para virtualización de entornos y despliegue, permitiendo flujos de trabajo consistentes entre desarrollo y producción. Me gusta cuidar cada etapa del desarrollo: del código a la infraestructura.
-
-Pero más allá de las tecnologías, lo que me define es la curiosidad constante, el deseo de entender cómo funcionan las cosas y la búsqueda de soluciones limpias, sostenibles y útiles. Me involucro de lleno en cada proyecto, con el foco puesto en la calidad y la colaboración.`
-
-export const skillCards = [
+export const projects = [
   {
-  icon: 'bx bx-code-alt',
-  title: 'Front-End Dev',
-  description: `Tengo experiencia sólida en desarrollo front-end utilizando HTML, CSS y JavaScript. Además, he trabajado con frameworks modernos como Angular y React para construir interfaces dinámicas, responsivas y orientadas a la experiencia del usuario. Me enfoco en rendimiento, accesibilidad y buenas prácticas de desarrollo.
-
-1. Ineffabile Pizza: Proyecto de fin de grado (TFG) en el que se desarrolló una web de pedidos online para una pizzería ficticia. Utilizamos HTML, CSS y JavaScript para el frontend, Angular para el back office y Node.js como backend principal. Además, se empleó Docker para virtualizar Elasticsearch y crear un sistema de búsqueda avanzado dentro de la web.
-
-2. GTA VI Characters: Aplicación realizada con Next.js como parte de una exploración técnica personal. El objetivo era experimentar con scroll suave utilizando Lenis y animaciones fluidas con Framer Motion, basándome en la temática de personajes del videojuego.
-
-3. Sax APP: Aplicación en desarrollo destinada al Ayuntamiento de Sax y sus ciudadanos. Su objetivo es centralizar información municipal, eventos y servicios. Se ha desarrollado con React y Vite para el frontend, empleando Tailwind CSS para el diseño. El backend está construido con Node.js, incluyendo múltiples APIs para gestionar la comunicación con la base de datos.`,
-  projectCount: 3,
-  projectLinks: [
-      'https://ineffabile-pizza.vercel.app/',
-      'https://gtavi-characters-fan-page.vercel.app/',
-      'https://github.com/fgp4321/Sax-APP',
+    title: 'Podología Mar Navarro',
+    year: '2026',
+    kind: 'Web corporativa',
+    featured: true,
+    description:
+      'Sitio web de una clínica de podología de Villena. Es un sitio estático hecho con Astro, sin backend, sin cookies y sin herramientas de seguimiento, pensado para que cargue rápido y sea fácil de mantener.',
+    highlights: [
+      'HTML estático: el único JavaScript es el del menú móvil',
+      'Tipografías e iconos alojados en el propio sitio, sin llamadas a terceros',
+      'SEO técnico: datos estructurados, sitemap, Open Graph y páginas legales',
+      'Textos y datos del negocio centralizados y preparados para un segundo idioma',
     ],
-  hoverPosition: {
-    large: 'bottom',
-    small: 'bottom',
+    tags: ['Astro', 'TypeScript', 'CSS', 'Vercel'],
+    links: [{ label: 'Código', icon: 'bx bxl-github', url: 'https://github.com/fgp4321/podologia-mar-navarro' }],
   },
-},
-{
-  icon: 'bx bx-server',
-  title: 'Back-End Dev',
-  description:
-    `Como desarrollador back-end, tengo amplios conocimientos en Node.js y JavaScript. He trabajado en la creación de APIs, gestión de autenticaciones, procesos asincrónicos y lógica de negocio para aplicaciones escalables y seguras. Me preocupo por la eficiencia del código y la integración fluida con el front-end.
-    
-    1. Ineffabile Pizza: Proyecto de fin de grado (TFG) en el que se desarrolló una web de pedidos online para una pizzería ficticia. Utilizamos HTML, CSS y JavaScript para el frontend, Angular para el back office y Node.js como backend principal. Además, se empleó Docker para virtualizar Elasticsearch y crear un sistema de búsqueda avanzado dentro de la web.
-    
-    2. Sax APP: Aplicación en desarrollo destinada al Ayuntamiento de Sax y sus ciudadanos. Su objetivo es centralizar información municipal, eventos y servicios. Se ha desarrollado con React y Vite para el frontend, empleando Tailwind CSS para el diseño. El backend está construido con Node.js, incluyendo múltiples APIs para gestionar la comunicación con la base de datos.`,
-  projectCount: 2,
-  projectLinks: [
-      'https://ineffabile-pizza.vercel.app/',
-      'https://github.com/fgp4321/Sax-APP',
+  {
+    title: 'Sax APP',
+    year: '2025',
+    kind: 'Aplicación ciudadana',
+    description:
+      'Aplicación para el Ayuntamiento de Sax y sus vecinos: registro e inicio de sesión (también con Google), reserva de visitas guiadas al castillo, incidencias y sugerencias mediante tickets, mapa de desfibriladores del municipio y panel de administración.',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'MySQL', 'Leaflet'],
+    links: [{ label: 'Código', icon: 'bx bxl-github', url: 'https://github.com/fgp4321/Sax-APP' }],
+  },
+  {
+    title: 'Ineffabile Pizza',
+    year: '2024',
+    kind: 'Proyecto de fin de grado',
+    description:
+      'Web de pedidos online para una pizzería ficticia. Frontend en HTML, CSS y JavaScript, back office en Angular y backend en Node.js, con un buscador avanzado sobre Elasticsearch virtualizado con Docker.',
+    tags: ['JavaScript', 'Angular', 'Node.js', 'Elasticsearch', 'Docker'],
+    links: [
+      { label: 'Ver web', icon: 'bx bx-link-external', url: 'https://ineffabile-pizza.vercel.app/' },
+      { label: 'Código', icon: 'bx bxl-github', url: 'https://github.com/fgp4321/Ineffabile-Pizza' },
     ],
-  hoverPosition: {
-    large: 'bottom',
-    small: 'bottom',
   },
-},
-{
-  icon: 'bx bx-data',
-  title: 'Bases de Datos',
-  description:
-    `Domino tanto bases de datos relacionales (MySQL, PostgreSQL) como no relacionales (MongoDB). Tengo experiencia en diseño de esquemas eficientes, optimización de consultas y gestión de grandes volúmenes de datos, asegurando integridad y rendimiento en las aplicaciones que desarrollo.
-    
-    1. Ineffabile Pizza: Proyecto de fin de grado (TFG) en el que se desarrolló una web de pedidos online para una pizzería ficticia. Utilizamos HTML, CSS y JavaScript para el frontend, Angular para el back office y Node.js como backend principal. Además, se empleó Docker para virtualizar Elasticsearch y crear un sistema de búsqueda avanzado dentro de la web.
-    
-    2. Sax APP: Aplicación en desarrollo destinada al Ayuntamiento de Sax y sus ciudadanos. Su objetivo es centralizar información municipal, eventos y servicios. Se ha desarrollado con React y Vite para el frontend, empleando Tailwind CSS para el diseño. El backend está construido con Node.js, incluyendo múltiples APIs para gestionar la comunicación con la base de datos.`,
-  projectCount: 2,
-  projectLinks: [
-    'https://ineffabile-pizza.vercel.app/',
-    'https://github.com/fgp4321/Sax-APP',
-  ],
-  hoverPosition: {
-    large: 'bottom',
-    small: 'bottom',
+  {
+    title: 'sax.es',
+    year: '2025',
+    kind: 'Migración institucional',
+    description:
+      'Migración completa de la web del municipio de Sax a WordPress, en colaboración con la Diputación de Alicante dentro del Plan Moderniza: configuración y optimización de plugins y adaptación del contenido institucional.',
+    tags: ['WordPress', 'PHP', 'SEO'],
+    links: [{ label: 'Ver web', icon: 'bx bx-link-external', url: 'https://www.sax.es/' }],
   },
-},
-{
-  icon: 'bx bxl-microsoft',
-  title: 'Ecosistema Microsoft',
-  description:
-    'He trabajado extensamente con herramientas del ecosistema Microsoft, incluyendo Excel, Outlook, SharePoint y Teams. Conozco bien su integración en entornos corporativos y cómo aprovechar sus funcionalidades para mejorar la productividad, automatizar procesos y colaborar en equipos. Además, tengo experiencia en administración de sistemas con Windows Server y un conocimiento profundo de Active Directory y Azure, lo que me permite gestionar eficientemente infraestructuras híbridas y entornos empresariales.',
-  projectCount: 0,
-  hoverPosition: {
-    large: 'top',
-    small: 'bottom',
+  {
+    title: 'GTA VI Characters',
+    year: '2025',
+    kind: 'Experimento personal',
+    description:
+      'Página de personajes del videojuego hecha para probar scroll suave con Lenis y animaciones con Framer Motion sobre Next.js.',
+    tags: ['Next.js', 'TypeScript', 'Framer Motion', 'Lenis'],
+    links: [
+      { label: 'Ver web', icon: 'bx bx-link-external', url: 'https://gtavi-characters-fan-page.vercel.app/' },
+      { label: 'Código', icon: 'bx bxl-github', url: 'https://github.com/fgp4321/GTAVI-CharactersFanPage' },
+    ],
   },
-},
-{
-  icon: 'bx bx-world',
-  title: 'CMS & WordPress',
-  description:
-    `Tengo amplia experiencia con CMS, especialmente WordPress. He desarrollado sitios a medida, personalizado temas y plugins, y gestionado contenido optimizado para SEO. Esto me permite crear soluciones flexibles, eficientes y fáciles de mantener para diferentes tipos de clientes y proyectos.
-    
-    1. Sax.es: Colaboración con la Diputación de Alicante dentro del Plan Moderniza para la migración completa del sitio web del municipio de Sax. Se trabajó con WordPress, optimizando y configurando numerosos plugins. El proyecto me permitió adquirir gran experiencia en gestión de CMS y en la adaptación de contenido institucional a un entorno digital moderno.
-    
-    2. Vysan.es: Sitio web de comercio de componentes electrónicos desarrollado en PrestaShop. Me encargué del mantenimiento general, actualización de versiones y módulos, subida de nuevos productos y modificación de precios. Este proyecto me dio experiencia práctica en la gestión de tiendas online y la operativa diaria de un e-commerce.`,
-  projectCount: 2,
-  projectLinks: [
-    'https://www.sax.es/',
-    'https://vysan.es/es/',
-  ],
-  hoverPosition: {
-    large: 'top',
-    small: 'bottom',
+]
+
+export const skillGroups = [
+  {
+    icon: 'bx bx-code-alt',
+    title: 'Front-end',
+    summary: 'Interfaces responsivas y accesibles, con atención al rendimiento.',
+    items: ['React', 'Angular', 'Astro', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML y CSS'],
   },
-},
-{
-  icon: 'bx bxl-docker',
-  title: 'Contenedores & Virtualización',
-  description:
-    `Conozco el uso de contenedores con Docker para crear entornos de desarrollo reproducibles y eficientes. Además, tengo experiencia en la orquestación con Kubernetes para desplegar aplicaciones escalables. Esta habilidad me permite optimizar flujos DevOps y garantizar estabilidad en producción.
-    
-    1. Ineffabile Pizza: Proyecto de fin de grado (TFG) en el que se desarrolló una web de pedidos online para una pizzería ficticia. Utilizamos HTML, CSS y JavaScript para el frontend, Angular para el back office y Node.js como backend principal. Además, se empleó Docker para virtualizar Elasticsearch y crear un sistema de búsqueda avanzado dentro de la web.`,
-  projectCount: 1,
-  projectLinks: [
-    'https://ineffabile-pizza.vercel.app/',
-  ],
-  hoverPosition: {
-    large: 'top',
-    small: 'bottom',
+  {
+    icon: 'bx bx-server',
+    title: 'Back-end',
+    summary: 'APIs REST, autenticación y lógica de negocio.',
+    items: ['Node.js', 'Express', '.NET', 'Visual Basic', 'PHP', 'Java'],
   },
-},
+  {
+    icon: 'bx bx-data',
+    title: 'Bases de datos',
+    summary: 'Diseño de esquemas, consultas y búsqueda.',
+    items: ['SQL Server', 'MySQL', 'PostgreSQL', 'MongoDB', 'Elasticsearch'],
+  },
+  {
+    icon: 'bx bxl-docker',
+    title: 'Contenedores y despliegue',
+    summary: 'Entornos reproducibles de desarrollo a producción.',
+    items: ['Docker', 'Kubernetes', 'AWS', 'Jenkins', 'Vercel'],
+  },
+  {
+    icon: 'bx bx-world',
+    title: 'CMS y comercio online',
+    summary: 'Sitios a medida, plugins, migraciones y mantenimiento.',
+    items: ['WordPress', 'PrestaShop'],
+  },
+  {
+    icon: 'bx bxl-microsoft',
+    title: 'Ecosistema Microsoft',
+    summary: 'Administración y automatización en entornos corporativos.',
+    items: ['Microsoft 365', 'Entra ID', 'Power Automate', 'SharePoint', 'Azure', 'Windows Server', 'Active Directory'],
+  },
 ]
 
 export const resumeData = {
-  profile: `Entusiasta de la administración de sistemas, la ciberseguridad y el desarrollo de software.
-    Experiencia en mantenimiento y optimización de servidores, análisis técnico y mejora continua
-    de infraestructuras IT. Motivado por aprender nuevas tecnologías y aplicarlas en soluciones
-    eficientes y seguras.`,
+  profile: `Desarrollador web full stack con base en administración de sistemas. Trabajo en el
+    desarrollo y mantenimiento de aplicaciones para la administración pública y me interesan
+    también la infraestructura y la ciberseguridad.`,
 
   contact: [
     { label: 'Email', value: 'fgp4321@gmail.com', link: 'mailto:fgp4321@gmail.com' },
@@ -150,25 +146,25 @@ export const resumeData = {
       company: 'Diputación Provincial de Alicante',
       period: 'Dic 2025 - Actualidad',
       role: 'Técnico Superior de Desarrollo',
-      description: 'Visual Basic, .NET, desarrollo de aplicaciones multiplataforma, documentación, soporte de GLPI.'
+      description: 'Desarrollo de aplicaciones con Visual Basic y .NET, bases de datos SQL Server, WordPress y PHP, gestión de incidencias con GLPI y documentación de proyectos.'
     },
     {
       company: 'Ayuntamiento de Sax',
       period: 'Dic 2024 - Dic 2025',
       role: 'Técnico Informático',
-      description: 'Microsoft 365, React, automatización con Power Automate, administración de sistemas y redes.'
+      description: 'Microsoft 365 y Entra ID, WordPress y React, automatización de procesos con Power Automate, administración de sistemas y redes.'
     },
     {
       company: 'Delfín Servicio Integral, S.L.U',
       period: 'Oct 2023 - Jun 2024',
       role: 'Desarrollador Web',
-      description: 'Virtualización, microservicios, Docker, Kubernetes, NodeJS, React, AWS, documentación API.'
+      description: 'Virtualización y contenedores, microservicios con Docker y Kubernetes, Elastic Stack, Node.js, Angular, React, Jenkins, AWS y documentación de API.'
     },
     {
       company: 'Vysan Componentes Electrónicos S.L.',
       period: 'Mar 2022 - Jun 2022',
       role: 'Técnico Informático',
-      description: 'Mantenimiento web, soporte técnico, gestión de almacén, automatización de procesos.'
+      description: 'Mantenimiento de la tienda online en PrestaShop (vysan.es), soporte técnico, gestión de almacén y automatización de procesos.'
     }
   ],
 
@@ -183,8 +179,13 @@ export const resumeData = {
     'Hacking ético',
   ],
 
+  languages: [
+    'Español — nativo',
+    'Valenciano — nivel intermedio',
+    'Inglés — nivel intermedio',
+  ],
+
   misc: [
     'Permiso B y A2',
-    
   ]
 }

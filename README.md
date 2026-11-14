@@ -30,11 +30,11 @@ VITE_EMAILJS_PUBLIC_KEY=
 ## Estructura
 
 ```
-public/            CV en PDF e imágenes
+public/            CV en PDF y favicon
 src/
-  components/      Hero, Resume, Services, Contact, Navbar, Loader…
+  components/      Hero, Projects, Resume, Services, Contact, Navbar…
   context/         Tema claro/oscuro
-  data/index.js    Todos los textos: sobre mí, habilidades, proyectos, experiencia
+  data/index.js    Todos los textos: inicio, proyectos, habilidades, experiencia
 ```
 
 Para cambiar textos, proyectos o experiencia basta con editar `src/data/index.js`.
