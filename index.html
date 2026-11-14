@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      // Aplica el tema guardado antes del primer pintado para evitar el destello claro
+      try { if (JSON.parse(localStorage.getItem('darkMode'))) document.documentElement.classList.add('dark') } catch (e) {}
+    </script>
     <title>Francisco González - Portfolio</title>
     <meta name="description" content="Portfolio de Francisco González Poveda, desarrollador web full stack en Alicante: proyectos, trayectoria profesional y contacto." />
     <link rel="canonical" href="https://francisco-gonzalez.me/" />
