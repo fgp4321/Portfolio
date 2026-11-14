@@ -9,9 +9,9 @@ const Hero = () => {
   const [isRotating, setIsRotating] = useState(false)
   const [isTextVisible, setIsTextVisible] = useState(false)
   const [roadImageOpacity, setRoadImageOpacity] = useState(0.5)
-  let currentIndex = 0
 
   useEffect(() => {
+    let currentIndex = 0
     const interval = setInterval(() => {
       setIsRotating(true)
       setTimeout(() => {
