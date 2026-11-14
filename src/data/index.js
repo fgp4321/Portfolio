@@ -66,27 +66,6 @@ export const projects = [
       { label: 'Código', icon: 'bx bxl-github', url: 'https://github.com/fgp4321/Ineffabile-Pizza' },
     ],
   },
-  {
-    title: 'sax.es',
-    year: '2025',
-    kind: 'Migración institucional',
-    description:
-      'Migración completa de la web del municipio de Sax a WordPress, en colaboración con la Diputación de Alicante dentro del Plan Moderniza: configuración y optimización de plugins y adaptación del contenido institucional.',
-    tags: ['WordPress', 'PHP', 'SEO'],
-    links: [{ label: 'Ver web', icon: 'bx bx-link-external', url: 'https://www.sax.es/' }],
-  },
-  {
-    title: 'GTA VI Characters',
-    year: '2025',
-    kind: 'Experimento personal',
-    description:
-      'Página de personajes del videojuego hecha para probar scroll suave con Lenis y animaciones con Framer Motion sobre Next.js.',
-    tags: ['Next.js', 'TypeScript', 'Framer Motion', 'Lenis'],
-    links: [
-      { label: 'Ver web', icon: 'bx bx-link-external', url: 'https://gtavi-characters-fan-page.vercel.app/' },
-      { label: 'Código', icon: 'bx bxl-github', url: 'https://github.com/fgp4321/GTAVI-CharactersFanPage' },
-    ],
-  },
 ]
 
 export const skillGroups = [
@@ -117,7 +96,7 @@ export const skillGroups = [
   {
     icon: 'bx bx-world',
     title: 'CMS y comercio online',
-    summary: 'Sitios a medida, plugins, migraciones y mantenimiento.',
+    summary: 'Gestión de contenidos, plugins y mantenimiento de tiendas online.',
     items: ['WordPress', 'PrestaShop'],
   },
   {
