@@ -35,7 +35,7 @@ const Projects = () => {
             Mis <span className='text-red-500 dark:text-yellow-500 transition-colors duration-500'>Proyectos</span>
           </h2>
           <p className='mt-6 max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 transition-colors duration-500'>
-            Una selección de lo que he construido, del más reciente al más antiguo.
+            Una selección de lo que he construido en los últimos años.
           </p>
         </header>
 
