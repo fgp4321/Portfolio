@@ -1,69 +1,70 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from './Navbar'
-import NavigationCircles from './NavigationCircles'
-import { letters, professionTexts, aboutText, socialIcons } from '../data/index'
+import React from 'react'
+import { hero, socialIcons } from '../data/index'
 
-const Hero = () => {
-  const [hoveredLetter, setHoveredLetter] = useState(null)
-  const [currentText, setCurrentText] = useState(professionTexts[0])
-  const [isRotating, setIsRotating] = useState(false)
-  const [isTextVisible, setIsTextVisible] = useState(false)
-  const [roadImageOpacity, setRoadImageOpacity] = useState(0.5)
-
-  useEffect(() => {
-    let currentIndex = 0
-    const interval = setInterval(() => {
-      setIsRotating(true)
-      setTimeout(() => {
-        currentIndex = (currentIndex + 1) % professionTexts.length
-        setCurrentText(professionTexts[currentIndex])
-        setIsRotating(false)
-      }, 300)
-    }, 5000)
-
-    return () => clearInterval(interval)
-  }, [])
+const Hero = ({ onNavigate }) => {
   return (
-    <div id='home' className='w-full h-screen flex flex-col justify-center items-center isolate relative z-10'>
-      <Navbar />
-      <div className='flex flex-col md:items-center items-start xl:gap-y-10 gap-y-3 xl:mb-0 md:mb-20 mb-0'>
-        <h1 className='flex flex-col xl:space-y-8 md:space-y-4 space-y-2 xl:text-6xl md:text-4xl text-3xl md:font-normal font-bolder mt-8 md:mt-0'>
-          <span className='flex mx-auto md:mx-0'>
-            {letters.map((letter, index) => (
-              <span key={index} className='inline-block md:w-38 w-32 xl:-mr-20 -mr-24 relative' onMouseEnter={() => setHoveredLetter(index)} onMouseLeave={() => setHoveredLetter(null)}>
-                {letter.char}
-                <img src={letter.img} alt={`Hover image ${index + 1 }`} className={`xl:h-36 h-24 absolute bottom-full -translate-x-1/2 ${letter.rotate} ${hoveredLetter === index ? 'visible' : 'invisible'}`} />
-              </span>
-            ))}
-          </span>
-          <span className='xl:text-6xl md:text-4xl text-2xl tracking-wider xl:py-4 py-2 overflow-hidden text-center'>
-            Soy desarrollador{' '} <span className={`inline-block xl:w-[380px] md:w-[240px] w-[160px] lg:ml-6 ml-2 font-extrabold transform origin-left transition-transform duration-300 ease-out ${isRotating ? 'hidden md:rotate-[100deg]' : 'rotate-0'}`}>{currentText}</span>
-          </span>
-        </h1>
-        <button className='xl:w-[400px] md:w-[300px] w-[270px] bg-gray-900 dark:bg-gray-200 md:py-1 py-0 md:px-4 px-2 xl:text-2xl md:text-xl text-base text-white dark:text-gray-900 tracking-widest rounded-r-4xl flex justify-between items-center md:mr-auto md:mx-0 mx-auto transition-colors duration-500' onClick={() => setIsTextVisible(!isTextVisible)} onMouseEnter={() => setRoadImageOpacity(0.8)} onMouseLeave={() => setRoadImageOpacity(0.5)} >{isTextVisible ? 'Oculta mi historia' : 'Lee mi historia'} <i className={`bx ${isTextVisible ? 'bx-book-alt' : 'bx-book-open'}`}></i></button>
-        <div className='flex md:gap-12 gap-2 mr-auto absolute md:relative left-4 md:left-auto top-20 md:top-auto flex-col md:flex-row'>
-          {socialIcons.map((social, index) => (
-            <a
-              href={social.url}
-              key={index}
-              target="_blank"
-              rel="noopener noreferrer"
-              className='xl:text-3xl md:text-2xl text-red-500 dark:text-yellow-500 dark:hover:text-white hover:text-gray-900 transition-colors duration-500'
-            >
-              <i className={social.icon}></i>
-            </a>
+    <section id='home' className='w-full min-h-screen flex items-center px-4 sm:px-6 lg:px-8 md:pt-24 pt-28 pb-16'>
+      <div className='max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-5 gap-x-12 gap-y-12 items-center'>
+
+        <div className='lg:col-span-3'>
+          <p className='md:text-base text-sm font-bold tracking-widest uppercase'>{hero.eyebrow}</p>
+          <h1 className='mt-4 xl:text-7xl md:text-6xl text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white transition-colors duration-500'>
+            {hero.firstName}{' '}
+            <span className='block text-red-500 dark:text-yellow-500 transition-colors duration-500'>{hero.lastName}</span>
+          </h1>
+          <p className='mt-6 md:text-2xl text-lg font-light tracking-wide text-gray-900 dark:text-gray-200 transition-colors duration-500'>{hero.lead}</p>
+          {hero.about.map((paragraph, index) => (
+            <p key={index} className='mt-4 md:text-lg text-base font-light text-gray-600 dark:text-gray-400 transition-colors duration-500'>{paragraph}</p>
           ))}
-        </div>
-        <div className='lg:w-[600px] md:w-[500px] w-[350px] absolute left-1/2 -translate-x-1/2 -z-10'>
-          <img src="images/road.png" alt="Road Image" className='w-full mx-auto transition-opacity duration-300' style={{opacity: roadImageOpacity}}/>
-          <span className='xl:text-xs md:text-[10px] text-[8px] font-bold tracking-wide  absolute -top-5 xl:right-22 lg:right-26 md:right-16 right-10 rotate-[3.5deg] animate-bounce'>En busca de nuevos retos</span>
-          <div className={`xl:h-[150px] h-[100px] px-3 xl:text-lg md:text-base text-xs font-light text-gray-900 dark:text-gray-200 text-justify tracking-wide overflow-y-auto transform origin-top custom-scrollbar ${isTextVisible ? 'scale-y-100' : 'scale-y-0'} transition-transform duration-300`}>
-            <p className='xl:py-3 py-1 px-1 [&::first-letter]:text-[30px] [&::first-letter]:ml-5 [&::first-letter]:text-red-500 dark:[&::first-letter]:text-yellow-500'>{aboutText}</p>
+
+          <div className='mt-10 flex flex-wrap items-center gap-x-6 gap-y-4'>
+            <a
+              href='#projects'
+              onClick={(e) => onNavigate(e, 'projects')}
+              className='md:w-[260px] w-[220px] bg-gray-900 dark:bg-gray-200 py-2 px-4 md:text-xl text-base text-white dark:text-gray-900 tracking-widest rounded-r-4xl flex justify-between items-center hover:bg-red-500 dark:hover:bg-yellow-500 transition-colors duration-500'
+            >
+              Ver proyectos <i className='bx bx-right-arrow-alt text-2xl'></i>
+            </a>
+            <a
+              href='/CV-Francisco-Gonzalez.pdf'
+              download
+              className='inline-flex items-center gap-2 py-2 px-4 md:text-xl text-base tracking-widest border border-red-500 dark:border-yellow-500 hover:bg-red-500 hover:text-white dark:hover:bg-yellow-500 dark:hover:text-gray-900 transition-colors duration-500'
+            >
+              Descargar CV <i className='bx bx-download text-xl'></i>
+            </a>
+            <div className='flex gap-x-5'>
+              {socialIcons.map((social) => (
+                <a
+                  href={social.url}
+                  key={social.label}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label={social.label}
+                  className='text-3xl text-red-500 dark:text-yellow-500 dark:hover:text-white hover:text-gray-900 transition-colors duration-500'
+                >
+                  <i className={social.icon}></i>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
+
+        <aside className='lg:col-span-2 bg-gray-200 dark:bg-gray-800 rounded-sm ring-2 ring-gray-400/20 shadow-md shadow-gray-700/20 p-6 transition-colors duration-500'>
+          <dl className='divide-y divide-gray-400/30'>
+            {hero.facts.map((fact) => (
+              <div key={fact.label} className='py-4 first:pt-0 last:pb-0'>
+                <dt className='text-xs font-bold tracking-widest uppercase'>{fact.label}</dt>
+                <dd className='mt-1 md:text-xl text-lg font-bold text-gray-900 dark:text-white transition-colors duration-500'>{fact.value}</dd>
+                {fact.detail && (
+                  <dd className='text-sm font-light text-gray-600 dark:text-gray-400 transition-colors duration-500'>{fact.detail}</dd>
+                )}
+              </div>
+            ))}
+          </dl>
+        </aside>
+
       </div>
-      <NavigationCircles section="home"/>
-    </div>
+    </section>
   )
 }
 

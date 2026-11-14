@@ -1,69 +1,41 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React from 'react'
 import { useTheme } from '../context/ThemeContext'
+import { sections } from '../data/index'
 
-const Navbar = () => {
+const Navbar = ({ activeSection, onNavigate }) => {
   const { darkMode, toggleDarkMode } = useTheme()
-  const [activeSection, setActiveSection] = useState('home')
-  const isScrollingRef = useRef(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["home", "resume", "services", "contact"]
-      sections.forEach((sectionId) => {
-        const element = document.getElementById(sectionId)
-        if (element) {
-          const {top, bottom} = element.getBoundingClientRect()
-          if (top <= 100 && bottom >= 100) {
-            setActiveSection(sectionId)
-          }
-        }
-      })
-    }
-
-    window.addEventListener('scroll', handleScroll)
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const handleNavClick = (e, sectionId) => {
-    e.preventDefault()
-    setActiveSection(sectionId)
-    isScrollingRef.current = true
-    const element = document.getElementById(sectionId)
-    element?.scrollIntoView({behavior: 'smooth'})
-    setTimeout(() => {
-      isScrollingRef.current = false
-    }, 1000)
-  }
   return (
-    <div className='w-full md:h-12 sm:h-14 h-18 flex flex-col md:flex-row justify-center md:justify-between items-center xl:px-36 lg:px-24 md:px-12 sm:px-6 px-4 fixed top-0 z-50 bg-white dark:bg-gray-900 transition-colors duration-500'>
+    <header className='w-full md:h-12 h-20 flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-2 xl:px-36 lg:px-12 md:px-6 px-3 fixed top-0 z-50 bg-white dark:bg-gray-900 transition-colors duration-500'>
       <div className='flex items-center sm:gap-x-4 gap-x-2'>
-        <a href="#" className='md:text-2xl sm:text-xl text-lg'>Francisco González Poveda</a>
-        <i className={`${darkMode ? 'bx bx-sun' : 'bx bx-moon'} md:text-3xl sm:text-2xl text-xl text-gray-600 dark:text-gray-200 sm:ml-4 ml-2 cursor-pointer`} onClick={toggleDarkMode}></i>
-      </div>
-      <div>
-        <a href="#home" className={`group lg:text-lg md:text-base text-sm font-light text-red-500 dark:text-yellow-500 lg:mr-12 mr-8 tracking-wide relative ${activeSection === "home" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'home')}>Inicio
-            <span className={`absolute -bottom-1 left-0 w-full h-[1px] text-red-500 dark:text-yellow-500 transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "home" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
-        </a>
-        <a href="#resume" className={`group lg:text-lg md:text-base text-sm font-light text-gray-600 dark:text-white lg:mr-12 mr-8 tracking-wide relative ${activeSection === "resume" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'resume')}>Currículum
-            <span className={`absolute -bottom-1 left-0 w-full h-[1px] bg-gray-600 dark:bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "resume" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
-        </a>
-        <a href="#services" className={`group lg:text-lg md:text-base text-sm font-light text-gray-600 dark:text-white lg:mr-12 mr-8 tracking-wide relative ${activeSection === "services" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'services')}>Habilidades
-            <span className={`absolute -bottom-1 left-0 w-full h-[1px] bg-gray-600 dark:bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "services" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
-        </a>
-        <a href="#contact" className={`group lg:text-lg md:text-base text-sm font-light text-gray-600 dark:text-white lg:mr-12 mr-8 tracking-wide relative ${activeSection === "contact" ? "text-red-500 dark:text-yellow-500" : "text-gray-600 dark:text-white"}`} onClick={(e) => handleNavClick(e, 'contact')}>Contacto
-            <span className={`absolute -bottom-1 left-0 w-full h-[1px] bg-gray-600 dark:bg-white transform scale-x-0 group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${activeSection === "contact" ? "bg-red-500 dark:bg-yellow-500 scale-x-100" : "bg-gray-600 dark:bg-white scale-x-0"}`}></span>
-        </a>
-        {/* <a 
-          href="/CV-Francisco-Gonzalez.pdf" 
-          download 
-          className="group inline-flex items-center gap-2 lg:text-lg md:text-base text-sm font-light text-white dark:text-gray-900 bg-red-500 dark:bg-yellow-500 px-4 py-1 rounded-xl shadow hover:brightness-110 transition duration-300 tracking-wide"
+        <a href="#home" className='lg:text-2xl sm:text-xl text-lg' onClick={(e) => onNavigate(e, 'home')}>Francisco González Poveda</a>
+        <button
+          type='button'
+          onClick={toggleDarkMode}
+          aria-label={darkMode ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
+          className='sm:ml-4 ml-2 cursor-pointer grid place-items-center'
         >
-          CV
-          <i className="bx bx-download text-xl"></i>
-        </a> */}
+          <i className={`${darkMode ? 'bx bx-sun' : 'bx bx-moon'} md:text-3xl sm:text-2xl text-xl text-gray-600 dark:text-gray-200`}></i>
+        </button>
       </div>
-    </div>
+      <nav aria-label='Secciones' className='flex lg:gap-x-10 md:gap-x-6 sm:gap-x-6 gap-x-3'>
+        {sections.map(({ id, label }) => {
+          const isActive = activeSection === id
+          return (
+            <a
+              key={id}
+              href={`#${id}`}
+              aria-current={isActive ? 'true' : undefined}
+              onClick={(e) => onNavigate(e, id)}
+              className={`group lg:text-lg sm:text-base text-xs font-light tracking-wide relative ${isActive ? 'text-red-500 dark:text-yellow-500' : 'text-gray-600 dark:text-white'}`}
+            >
+              {label}
+              <span className={`absolute -bottom-1 left-0 w-full h-[1px] transform group-hover:scale-x-100 group-hover:origin-left origin-right transition duration-300 ${isActive ? 'bg-red-500 dark:bg-yellow-500 scale-x-100' : 'bg-gray-600 dark:bg-white scale-x-0'}`}></span>
+            </a>
+          )
+        })}
+      </nav>
+    </header>
   )
 }
 
