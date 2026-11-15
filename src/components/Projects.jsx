@@ -39,11 +39,11 @@ const Projects = () => {
           </p>
         </header>
 
-        <div className='mt-16 grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div className='mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className={`flex flex-col gap-y-5 p-6 bg-gray-200 dark:bg-gray-800 rounded-sm ring-2 ring-gray-400/20 shadow-md shadow-gray-700/20 transition-colors duration-500 ${project.featured ? 'md:col-span-2 md:p-8' : ''}`}
+              className={`flex flex-col gap-y-5 p-6 bg-gray-200 dark:bg-gray-800 rounded-sm ring-2 ring-gray-400/20 shadow-md shadow-gray-700/20 transition-colors duration-500 ${project.featured ? 'md:col-span-2 lg:col-span-3 md:p-8' : ''}`}
             >
               <div className='flex items-baseline justify-between gap-x-4'>
                 <span className='text-sm font-bold tracking-widest uppercase'>
@@ -57,7 +57,7 @@ const Projects = () => {
                   <h3 className={`font-bold text-gray-900 dark:text-white transition-colors duration-500 ${project.featured ? 'md:text-4xl text-3xl' : 'text-2xl'}`}>{project.title}</h3>
                   <p className='text-base font-light text-gray-700 dark:text-gray-300 transition-colors duration-500'>{project.description}</p>
                 </div>
-                {project.highlights && (
+                {project.featured && project.highlights && (
                   <ul className='space-y-2 self-center'>
                     {project.highlights.map((item) => (
                       <li key={item} className='flex items-start text-base font-light text-gray-700 dark:text-gray-300 transition-colors duration-500'>

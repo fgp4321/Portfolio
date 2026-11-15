@@ -30,10 +30,28 @@ export const hero = {
 
 export const projects = [
   {
+    title: 'NIGHT//SHIFT',
+    year: '2026',
+    kind: 'Experiencia interactiva',
+    featured: true,
+    description:
+      'Experiencia web inmersiva de ambientación cyberpunk, con marca, textos e interfaces originales. Es una única película en cinco actos guiada por el scroll que recorre tres mundos: una ciudad nocturna en 3D, su sistema operativo y el submundo que hay debajo.',
+    highlights: [
+      'Ciudad 3D procedural pintada con shaders GLSL propios, sin modelos ni texturas',
+      'NIGHT//OS: escritorio con gestor de ventanas y cuatro aplicaciones (terminal, base de datos, mapa y radio)',
+      'Sonido sintetizado con Web Audio, sin archivos de audio',
+      'Tres niveles de calidad según el dispositivo, alternativa sin WebGL y modo de movimiento reducido',
+    ],
+    tags: ['Next.js', 'TypeScript', 'Three.js', 'React Three Fiber', 'GSAP', 'Lenis', 'Tailwind CSS'],
+    links: [
+      { label: 'Ver web', icon: 'bx bx-link-external', url: 'https://nightshift-five.vercel.app/' },
+      { label: 'Código', icon: 'bx bxl-github', url: 'https://github.com/fgp4321/nightshift' },
+    ],
+  },
+  {
     title: 'Podología Mar Navarro',
     year: '2026',
     kind: 'Web corporativa',
-    featured: true,
     description:
       'Sitio web de una clínica de podología de Villena. Es un sitio estático hecho con Astro, sin backend, sin cookies y sin herramientas de seguimiento, pensado para que cargue rápido y sea fácil de mantener.',
     highlights: [
@@ -57,7 +75,7 @@ export const projects = [
   {
     title: 'Ineffabile Pizza',
     year: '2024',
-    kind: 'Proyecto de fin de grado',
+    kind: 'Fin de grado',
     description:
       'Web de pedidos online para una pizzería ficticia. Frontend en HTML, CSS y JavaScript, back office en Angular y backend en Node.js, con un buscador avanzado sobre Elasticsearch virtualizado con Docker.',
     tags: ['JavaScript', 'Angular', 'Node.js', 'Elasticsearch', 'Docker'],
@@ -73,7 +91,7 @@ export const skillGroups = [
     icon: 'bx bx-code-alt',
     title: 'Front-end',
     summary: 'Interfaces responsivas y accesibles, con atención al rendimiento.',
-    items: ['React', 'Angular', 'Astro', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML y CSS'],
+    items: ['React', 'Next.js', 'Angular', 'Astro', 'Three.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML y CSS'],
   },
   {
     icon: 'bx bx-server',
